@@ -40,3 +40,8 @@ export interface UserInfo{
 export interface UserModel extends Model<IUser> {
     hashPassword(password:string):string
   }
+
+  export interface UserjwtToken {
+    user:IUser|null,
+    id:string|undefined,
+}
