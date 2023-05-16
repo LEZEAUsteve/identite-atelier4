@@ -15,7 +15,7 @@ export const login = async (req: Request, res: Response, _: NextFunction) => {
             const match = user.comparePassword(password);
             if (match) {
                 const token = createJwtToken({ user, id: undefined })
-                res.status(200).json({
+                res.status(201).json({
                     token: token,
                 });
             } else {
