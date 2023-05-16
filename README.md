@@ -5,6 +5,7 @@
 ### Inscription d'un utilisateur
 Route : ```/auth/signup```
 Cette route permet l'inscription d'un nouveau vendeur.
+
 **Les paramètres** nécéssaire sont :
 - ```username```
 - ```firstname```
@@ -22,6 +23,7 @@ Si il y a une erreur la réponse sera un code 404 avec le l'erreur d'indiquer
 ### Connexion d'un utilisateur
 Route : ```/auth/signin```
 Cette route permet la connexion à un vendeur.
+
 **Les paramètres** nécéssaire sont :
 - ```email```
 - ```password```
@@ -36,6 +38,7 @@ Si il y a une erreur la réponse sera un code 404 avec le l'erreur d'indiquer
 ### Information d'un utilisateur
 Route : ```/auth/me```
 Cette route permet la connexion à un vendeur.
+
 **Le paramètre** nécéssaire est :
 - ```token```
 	- ```sub:``` c'est l'id du vendeur
