@@ -4,6 +4,7 @@
 
 ### Inscription d'un utilisateur
 Route : ```/auth/signup``` : Méthode POST
+
 Cette route permet l'inscription d'un nouvel utilisateur.
 
 **Les paramètres** nécéssaire sont :
@@ -22,6 +23,7 @@ Si il y a une erreur la réponse sera un code 404 avec l'erreur d'indiquer
 
 ### Connexion d'un utilisateur
 Route : ```/auth/login``` : Méthode POST
+
 Cette route permet la connexion à un utilisateur.
 
 **Les paramètres** nécéssaire sont :
@@ -37,6 +39,7 @@ Si il y a une erreur la réponse sera un code 404 avec l'erreur d'indiquer
 
 ### Information d'un utilisateur
 Route : ```/auth/me``` : Méthode GET
+
 Cette route permet la connexion à un utilisateur.
 
 Il faut utiliser un **Bearer authentification**.
