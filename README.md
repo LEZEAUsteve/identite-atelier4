@@ -3,54 +3,54 @@
 ## Liste des routes
 
 ### Inscription d'un utilisateur
-Route : ```/auth/signup```
-Cette route permet l'inscription d'un nouveau vendeur.
+Route : ```/auth/signup``` : Méthode POST
+
+Cette route permet l'inscription d'un nouvel utilisateur.
 
 **Les paramètres** nécéssaire sont :
-- ```username```
-- ```firstname```
-- ```lastname```
-- ```email```
-- ```password```
+- ```username``` : *minimum 1 caractère*
+- ```firstname``` : *minimum 1 caractère*
+- ```lastname``` : *minimum 1 caractère*
+- ```email``` : *il faut une adresse mail valide*
+- ```password``` : *minimum 6 caractère*
 
-**La réponse** est un code 202 et un JSON avec comme info :
+**La réponse** est un code 201 et un JSON avec comme info :
 - ```token```
-	- ```sub:``` c'est l'id du vendeur
+	- ```sub:``` c'est l'id de l'utilisateur
 	- ```exp``` c'est la date d'expiration du token
 
-Si il y a une erreur la réponse sera un code 404 avec le l'erreur d'indiquer
+Si il y a une erreur la réponse sera un code 404 avec l'erreur d'indiquer
 
 ### Connexion d'un utilisateur
-Route : ```/auth/signin```
-Cette route permet la connexion à un vendeur.
+Route : ```/auth/login``` : Méthode POST
+
+Cette route permet la connexion à un utilisateur.
 
 **Les paramètres** nécéssaire sont :
-- ```email```
-- ```password```
+- ```email```  : *il faut une adresse mail valide*
+- ```password``` : *minimum 6 caractère*
 
-**La réponse** est un code 202 et un JSON avec comme info :
+**La réponse** est un code 200 et un JSON avec comme info :
 - ```token```
-	- ```sub:``` c'est l'id du vendeur
+	- ```sub:``` c'est l'id de l'utilisateur
 	- ```exp``` c'est la date d'expiration du token
 
-Si il y a une erreur la réponse sera un code 404 avec le l'erreur d'indiquer
+Si il y a une erreur la réponse sera un code 404 avec l'erreur d'indiquer
 
 ### Information d'un utilisateur
-Route : ```/auth/me```
-Cette route permet la connexion à un vendeur.
+Route : ```/auth/me``` : Méthode GET
 
-**Le paramètre** nécéssaire est :
-- ```token```
-	- ```sub:``` c'est l'id du vendeur
-	- ```exp``` c'est la date d'expiration du token
+Cette route permet la connexion à un utilisateur.
 
-**La réponse** est un code 202 et un JSON avec comme info :
+Il faut utiliser un **Bearer authentification**.
+
+**La réponse** est un code 200 et un JSON avec comme info :
 - ```username```
 - ```firstname```
 - ```lastname```
 - ```email```
 
-Si il y a une erreur la réponse sera un code 404 avec le l'erreur d'indiquer
+Si il y a une erreur la réponse sera un code 404 avec l'erreur d'indiquer
 
 ## Commande
 Pour lancer le projet :
