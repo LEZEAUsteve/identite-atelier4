@@ -7,11 +7,11 @@ Route : ```/auth/signup```
 Cette route permet l'inscription d'un nouveau vendeur.
 
 **Les paramètres** nécéssaire sont :
-- ```username```
-- ```firstname```
-- ```lastname```
-- ```email```
-- ```password```
+- ```username``` : *minimum 1 caractère*
+- ```firstname``` : *minimum 1 caractère*
+- ```lastname``` : *minimum 1 caractère*
+- ```email``` : *il faut une adresse mail valide*
+- ```password``` : *minimum 6 caractère*
 
 **La réponse** est un code 202 et un JSON avec comme info :
 - ```token```
@@ -25,8 +25,8 @@ Route : ```/auth/signin```
 Cette route permet la connexion à un vendeur.
 
 **Les paramètres** nécéssaire sont :
-- ```email```
-- ```password```
+- ```email```  : *il faut une adresse mail valide*
+- ```password``` : *minimum 6 caractère*
 
 **La réponse** est un code 202 et un JSON avec comme info :
 - ```token```
