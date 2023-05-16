@@ -28,10 +28,11 @@ const checkExpirationToken = (token: JwtPayload) => {
 }
 
 
-const createJwtToken = ({ user, id }: UserjwtToken) => {
+export const createJwtToken = ({ user, id }: UserjwtToken) => {
     const jwtToken = jwt.sign(
         {
             sub: id || user?._id.toString(),
+
             exp: Math.floor(Date.now() / 1000) + 5,
         },
         key
